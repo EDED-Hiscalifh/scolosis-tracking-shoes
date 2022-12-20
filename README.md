@@ -7,7 +7,7 @@
 # 1. Summarization 
 
 |About product|Contents|
-|:---:|:---:| 
+|:---:|:---| 
 |Project name|Scolosis observation project using foot pressure| 
 |Introduction|The foot pressure measurement device is a device that can measure the static foot pressure of a user, measure dynamic walking, and anlyze it, and is a user-friendly and easy to move. Within the project, a foot pressure measurement device was used to track the deepening and mitigration of scolosis, which is cost-effective compared to follow-up observation using conventional imaging equipment by measuring pressure differences in both feet. This work stores pressure sensor data measured through Bluetooth communication between Android and Apps in a smartphone, manipulates it through buttons in App Inventor application, and provides visualization plots with 2D Line chart and Table chart.| 
 |The background and necessity| 
