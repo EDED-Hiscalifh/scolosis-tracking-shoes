@@ -70,6 +70,31 @@
 
 ### 2.2.1 The composition diagram
 
+- S/W composistion diagram 
+  - Measured foot pressure data is received inside the application via Bluetooth communication. 
+  - After filtering the foot pressure data of both feet based on the 700 ADC value, only the maximum value is extracted. Calculate the average value of the extracted maximum value and store it in the left maximum averaged pressure value and the rigth maximum averaged pressure value variable, respectively. 
+  - Store data, username, left maximum averaged pressure, right maximum averaged pressure, and difference value in the TinyDB database. 
+  - When the visualization button is pressed in the application, the visualization plot is provided in the form of 2D Line-chart, Table chart. 
+  
+![Pic2. S/W composision diagram](Img/SW_flowchart.png)
+
+- H/W composition diagram 
+  - User puts on the device, then turns on the device. 
+  - Converts the pressure input to the pressure sensor into ADC units through an analog to digital function inside the MCU 
+  - $ADC = \frac{V_p \times 1024}{V_{REF}}$, $V_p$ = Input voltage of selected pin, $V_{REF}$ = Input voltage. 
+  - Transmitted the converted pressure value to the App Inventor application via Bluetooth communication. 
+
+![Pic3. H/W composition diagram](Img/HW_flowchart.png)
+
+- System composistion diagram 
+  - User wears device, operates application to enable application Bluetooth communication with Arduino. 
+  - Measure the foot pressure data via the Start button and exit the measurement via the Stop button. 
+  - Calcualtes data to be automatically stored in the database within the application. The calculated data calculates the average value of the maximium values for the pressures of each foot and the difference of their values. 
+  - Store analyzed data in the TinyDB database via the Store result button. 
+  - Press the Show result button to check the 2D Line-chart and Table chart according to the username through the GoogleWebView API. 
+
+![Pic4. System composition diagram](Img/System_flowchart.png)
+
 ### 2.2.2 The functions
 
 ### 2.2.3 They key application techniques
