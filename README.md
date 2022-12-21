@@ -97,6 +97,24 @@
 
 ### 2.2.2 The functions
 
+- List of functions 
+
+| Sortion | Functions | Explainations | Current Progress (%) | 
+|:---:|:---:|:---|:---:| 
+|S/W|Preprocessing and storing data|Arduino receives data sent to the application via Bluetooth communication and stores it inside the database|100|
+|S/W|Maximum - average value calculation algorithm for both foot pressure| Filter values below 700 ADC inside the application, then extract maximums and calculate averaged values|100| 
+|S/W|Provides a visualization plot of 2D Line-chart, Table chart to observe the trend of scolosis|Provides visualization plots of data stored inside the database into line graph and table through the Google WebView API|100| 
+|H/W|Pressure measurement|Measure the pressure using the FSR sensor and transmit the measured value using Arduino's Bluetooth module|100| 
+|H/W|ADC conversion and Bluetooth communication|ArduinoIDE convert signal into ADC units via analogRead function, and sends data to Bluetooth via ArduinoBLE library|100| 
+
+- Functions of S/W 
+
+|Functions|Explainations| 
+|:---:|:---|
+|Preprocessing and storing data|The application was created through the App Inventor. Among them, data calculated through algorithms are stored in TinyDB in the form of [user name, date, left foot pressure measurement, right ofot pressure measurement, difference value]| 
+|Maximum - average value calculation algorithm for both foot pressure| 
+|Provides a visualization plot of 2D Line-chart| 
+
 ### 2.2.3 They key application techniques
 
 ### 2.2.4 The development environments
