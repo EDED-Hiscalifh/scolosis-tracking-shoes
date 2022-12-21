@@ -21,6 +21,11 @@
 
 ### 2.1.1 Introduction
 
+- Foot pressure measuring device 
+  - A foot pressure measuring device is a device capable of measuring the static foot pressure of a user and measuring and analyzing dynamic walking, and is user-friendly and easy to move. 
+  - It is used for body shape and posture analysis through static foot pressure and dynamic walking pressure measurement, walking analysis, static balance, foot pressure distribution, maximum pressure test of each foot, and body center measurement. 
+  - Within the project, a foot pressure measurement device is used to track cost-effective scolosis deepening and mitigation compared to follow-up using conventional imaging equipment by measuring pressure differences in both feet. 
+  - In other words, a device that allows patients with scolosis to receive treatement and direction through daily observation records and consultation through quantitative records. 
 ### 2.1.2 The background and necessity 
 
 ### 2.1.3 The characteristics and advantages 
