@@ -111,12 +111,37 @@
 
 |Functions|Explainations| 
 |:---:|:---|
-|Preprocessing and storing data|The application was created through the App Inventor. Among them, data calculated through algorithms are stored in TinyDB in the form of [user name, date, left foot pressure measurement, right ofot pressure measurement, difference value]| 
+|Preprocessing and storing data|The application was created through the App Inventor. Among them, data calculated through algorithms are stored in TinyDB in the form of [user name, date, left foot pressure measurement, right foot pressure measurement, difference value]| 
 |Maximum - average value calculation algorithm for both foot pressure| 
-|Provides a visualization plot of 2D Line-chart| 
+|Provides a visualization plot of 2D Line-chart|If user press the Stop button to exit the measurement, removing values below 700(ADC). Afterwards, the maximum values are extracted based on a condition greater than the value of the previous index and the value of the subsequent index. Calculates and stores the average value of the extracted maximum value| 
+|Provides a visualization plot of 2D Line-chart, Table chart to observe the trend of scolosis|Press the Show result button to TinyDB table by username sent to Google WebView API. Inside the GoogleWebViewAPI LineChart.html, visualizing inside the application via the TableChart.html file provides plots| 
+
+- The UI of the application is largely composed of an operation part and a visualization part. The UI of the operation part is separated into 3 parts. The top part is the Bluetooth communication connection part, which allows users to connect to Arduino by installing an ArduinoBLE extension in the app inventory. 
+- The central part consists of five buttons. Measurement is started through the Start button, measurement is started through the Start button, and data is preprocessed. The Rest button allows the measured results to be initialized. Store the result button store the data in the form of [username, date, left foot presure measurement, right foot pressure measurement, difference value] in the TinyDB database inside the App Inventor. Afterwards, Show the result button moves screen to visulization UI. 
+- The visualization screen extracts data from the TinyDB database and provides visualization plots with 2D Line-chart and Table chart through the Google WebView API. 
+
+- Function of H/W 
+
+|Functions|Explainations| 
+|:---:|:---| 
+|Pressure measurement|Measure the pressure using the FSR sensor, MS9709, and transmit the measured value using Arduino's Bluetooth module|  
+|ADC conversion and Bluetooth communication| ArduinoIDE convert signals into ADC unit via analogRead function. Data is sent via Bluetooth using the ArduinoBLE library|
 
 ### 2.2.3 They key application techniques
 
+- Pressure sensor 
+  - Pressure sensor are a type of variable resistance that decreases when the pressure increases; i.e. the circuit measures the variable pressure resistance using conductance. 
+  - As the pressure applied to the pressure sensor increases, the value of the measured voltage also increases. 
+  - The pressure sensor used in the project is FSR sensor, MS9709, which is recognized an ADC vlaue in the range 0 to 1023 by the analog to digital function within the program. 
+
+- ADC units 
+  - $ADC = \frac{V_p \times 1024}{V_{REF}}$, $V_p$ = Input voltage of selected pin, $V_{REF}$ = Input voltage.
+  - The value of the voltage applied to the pressure sensor in the hardware is quantified to calculate ADC units for use within the software. The received voltage will be calculated by replacing it with 0V = 0.0 ADC and 3.3V = 1023 ADC. 1 ADC value will have a value of approximately 0.003V. 
+  - Can be calculated automatically by using the analogRead() function inside the ArduinoIDE. 
+
+- Maximum-mean value calculation algorithm 
+  - After a Bluetooth connection is made between Arduino and the application, the measured values are accumulated in the list of left and right pressure variables. Upon completion of the measurement, each variable list is cycled to take a value greater than the 700 ADC value and take the previous and subsequent values as the maximum value and store them in the maximum pressure variable list. 
+  - The aveage value of the maximum values stored in the list of maximum pressure variables is then calculated, stored in the left maximum pressure avreage and the right maximum pressure average variable, and the difference value is calcualted. 
 ### 2.2.4 The development environments
 
 ### 2.2.5 Other considerations
