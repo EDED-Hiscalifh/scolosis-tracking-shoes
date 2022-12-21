@@ -26,9 +26,45 @@
   - It is used for body shape and posture analysis through static foot pressure and dynamic walking pressure measurement, walking analysis, static balance, foot pressure distribution, maximum pressure test of each foot, and body center measurement. 
   - Within the project, a foot pressure measurement device is used to track cost-effective scolosis deepening and mitigation compared to follow-up using conventional imaging equipment by measuring pressure differences in both feet. 
   - In other words, a device that allows patients with scolosis to receive treatement and direction through daily observation records and consultation through quantitative records. 
+  
+ ![Pic1. Foot pressure measuring device : Dyafoot](Img/Dynafoot.png)
+ 
+- Intention of the project 
+  - The spartial disease is a disease that must be costantly managed. 
+  - If care is negelected, pain may worsen or deveop into other spinal diseases. 
+  - Management of spinal disease is mainly performed by follow-up using imaging equipment, but must be taken be visiting the hospital. 
+  - The object of project is to develop a device that can track and observe spinal diseases through simple self-measurement without using expensive devices. 
+  
+- Contents of the project 
+  - Store pressure sensor data measured by Bluetooth communication between Android and MCU in a smartphone database. 
+  - Operate buttons on App Inventor application to provide visualization plots with 2D Line chart and Table chart. 
+  
 ### 2.1.2 The background and necessity 
 
+- An increase in the number of patients with sipnal diseases
+  - As of 2015, the number of patients with spinal diseases in Korea was about 8.08 million, and as of 2020, the number of patitents with spinal disease in Korea was about 9.20 million, an increase of about 1.12 million(13%) over five years. 
+  - In particular, the increase in patients with spinal diseases in the 20s was about 19%, the steepest increase in all age groups. 
+  - Rapid growth in patients with spinal diseases in the 20s is influenced by increased use of potable IT devices and sitting time in incorrect posture and reduced exercise. 
+  
+- Diagnostic methods and management of scolosis 
+  - Scolosis confirms its degrees through the Cobb angle using imaging equipment. The Cobb angle is the angle formed by a parallel line in the vertebrae located at either end of the curve and perpendicular to each line. 
+  - According to the treatment policy of the Americal Scolosis Research Society, it is classified into observation, adjuvant, and surgical stages according to the degree. For the observation and adjuvant stages, the periodic follow-up based on imaging equipment and its recording is emphasized. 
+  
+- A team member's spinal disease
+  - In the case of team member, Seok-Gyu Jeong, has scolosis with 22 degree. He has been steadily managed since the ocuurence of lumber pain in 2018. 
+  - Scolosis is a typical disease that develops into herinated disc if management is neglected. 
+  - Therefore, the need for a device to manage a disease directly experienced by team members is reconsidered.
+  
 ### 2.1.3 The characteristics and advantages 
+
+- The characteristics of a work 
+  - The real-time data obtained through pressure sensors is transmitted to mobile devices via Bluetooth communication, and scolosis quantified by calculating the maximum average of the pressures of each foot. 
+  - Provides a 2D Lie chart and Table chart visualization plot to store foot pressure sensor data measured for the user's desired time inside the application database and observe scolosis.
+  
+- The advantages of a work 
+  - A device that can track and observe the degree of scolosis through a simple self-measurement method without using an expensive device. 
+  - Measure pressure on both feet to facilitate periodic management of quantitative data. 
+  - Continuous observations allow for earlier and faster observation and management of scolosis than imaging equipmenet. 
 
 ## 2.2 The contents of the project 
 
